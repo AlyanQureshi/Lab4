@@ -31,22 +31,20 @@ Description : Responsive Layouts.
         .footer { position: fixed; bottom: 0; width: 100%;}
         .news-item { padding: 10px; }
 
-		.row::after {
-			content: "";
-			display: table;
-			clear: both;
+		.row{
+		    box-sizing: border-box;
+		    display: block;
 		}
-
 		.large, .medium, .small {
 			/*I need some CSS codes.*/
-			width: 100%;
+			box-sizing: border-box;
 			float: left;
 			
 		}
 		
 		.gap {
 			/*I need some CSS codes.*/
-			clear: both;
+
 			height: 50px;
 			
 		}
@@ -55,17 +53,14 @@ Description : Responsive Layouts.
 		@media screen and (min-width: 769px) {			
 			.large { 
 				/*I need some CSS codes.*/
-				box-sizing: border-box;
 				width: 100%;
 			}
 			.medium { 
 				/*I need some CSS codes.*/
-				box-sizing: border-box;
 				width: 70%;
 			}
 			.small { 
 				/*I need some CSS codes.*/
-				box-sizing: border-box;
 				width: 30%;
 			 }
 		}
@@ -87,12 +82,14 @@ Description : Responsive Layouts.
 				width: 40%;
 			}
 
-			.menu, .main {
-				box-sizing: border-box;
-				width: auto;
-				float: none;
-				clear: both;
-			}
+            .menu{
+                width: 100%;
+                display: inline-block;
+            }
+            
+            .main{
+                margin-left:0;
+            }
 		}
 
 		@media screen and (max-width: 480px) {
@@ -103,11 +100,9 @@ Description : Responsive Layouts.
 			}
 
 			.menu, .main {
-				box-sizing: border-box;
-				width: auto;
-				float: none;
-				clear: both;
-			}
+			    width:100%;
+			    box-sizing: border-box;
+					}
 
 			h1 {
 				box-sizing: border-box;
